@@ -8,14 +8,12 @@ import connectDB from "./db/index.js";
 dotenv.config({ path: "./env" });
 
 // Define the allowed origins
-// const allowedOrigins = ['https://social-media-task-theta.vercel.app', 'https://social-media-task-burz56elg-ranjanas-projects-e143689b.vercel.app'];
+ const allowedOrigins = ['https://social-media-task-theta.vercel.app', 'https://social-media-task-burz56elg-ranjanas-projects-e143689b.vercel.app', '*'];
 
-app.options('*', cors()); 
-
-// app.use(cors({
-//   origin:allowedOrigins,
-//   credentials: true
-// }));
+app.use(cors({
+  origin:allowedOrigins,
+  credentials: true
+}));
 
 
 app.use('/user', userRoutes);

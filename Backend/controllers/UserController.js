@@ -2,7 +2,7 @@ import { User } from '../models/UserModel.js';
 import { validationResult } from 'express-validator';
 import cloudinary from 'cloudinary';
 
-// Configure Cloudinary
+
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
   api_key: process.env.CLOUDINARY_API_KEY,
@@ -22,7 +22,7 @@ const userController = async (req, res) => {
    try {
     let images = [];
 
-    // Loop through files and upload each to Cloudinary
+    //  upload each image to Cloudinary
     if (files && files.length > 0) {
       for (let file of files) {
         const result = await cloudinary.v2.uploader.upload(file.tempFilePath, {

@@ -1,6 +1,5 @@
 import { User } from '../models/UserModel.js';
 
-// Fetch users from the database
 const adminController = async (req, res) => {
   try {
     const users = await User.find({});

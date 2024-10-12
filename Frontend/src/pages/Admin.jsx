@@ -3,8 +3,8 @@ import UserCard from '../components/UserCard';
 import { useNavigate } from 'react-router-dom';
 const Admin = () => {
   const navigate=useNavigate();
-  const [userData, setUserData] = useState([]); // Initialize to an empty array
-  const [error, setError] = useState(null); // To handle any errors
+  const [userData, setUserData] = useState([]); 
+  const [error, setError] = useState(null); 
 
   const loadData = async () => {
     try {
@@ -20,7 +20,7 @@ const Admin = () => {
       }
 
       const response = await res.json();
-      setUserData(response || []); // Assuming response is an array of users
+      setUserData(response || []); 
     } catch (error) {
       console.error("Error loading data:", error);
       setError("Failed to load users. Please try again later.");

@@ -25,6 +25,10 @@ const UserForm = () => {
     try {
       const response = await fetch("https://social-media-task-dt4u.vercel.app/user", {
         method: 'POST',
+         headers: {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+  },
         body: formData,
       });
       

@@ -7,9 +7,11 @@ import connectDB from "./db/index.js";
 
 dotenv.config({ path: "./env" });
 
+// Define the allowed origins
+const allowedOrigins = ['https://social-media-task-theta.vercel.app'];
 
 app.use(cors({
-  origin: process.env.CORS_ORIGIN,
+  origin:allowedOrigins,
   credentials: true
 }));
 

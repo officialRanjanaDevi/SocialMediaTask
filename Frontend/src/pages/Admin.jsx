@@ -8,7 +8,7 @@ const Admin = () => {
 
   const loadData = async () => {
     try {
-      const res = await fetch("http://localhost:4000/admin", {
+      const res = await fetch("https://social-media-task-dt4u.vercel.app/admin", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

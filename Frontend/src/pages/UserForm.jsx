@@ -23,7 +23,7 @@ const UserForm = () => {
     });
 
     try {
-      const response = await fetch("http://localhost:4000/user", {
+      const response = await fetch("https://social-media-task-dt4u.vercel.app/user", {
         method: 'POST',
         body: formData,
       });

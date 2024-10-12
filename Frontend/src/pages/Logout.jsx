@@ -5,6 +5,7 @@ const Logout = () => {
   const navigate = useNavigate(); 
   const handleLogout = async () => {
     localStorage.clear();
+    console.log(localStorage);
     navigate("/");
   };
   useEffect(() => {

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const UserForm = () => {
+  const navigate=useNavigate();
   const [credentials, setCredentials] = useState({ name: "", socialMedia: "" });
   const [images, setImages] = useState([]);
   const [status, setStatus] = useState(""); 
@@ -159,6 +160,12 @@ const UserForm = () => {
           </button>
         </div>
       </form>
+<div className='text-center mt-12'>
+<button className="bg-black  text-white text-sm hover:bg-neutral-700 font-bold py-2 px-12 rounded focus:outline-none focus:shadow-outline"
+onClick={()=>{navigate('/admin')}}
+            >Admin Login</button>
+</div>
+      
     </div>
   )
 }

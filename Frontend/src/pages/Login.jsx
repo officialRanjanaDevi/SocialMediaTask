@@ -15,7 +15,9 @@ const Login = () => {
       if(credentials.email==="admin@gmail.com" && credentials.password==="admin"){
          localStorage.setItem("isLoggedIn",true);
           setStatus("Success");
+          console.log(localStorage);
           navigate('/admin')
+          
       }else{
         setStatus("Failed")
         setTimeout(() => setStatus(null), 3000);
@@ -113,6 +115,11 @@ const Login = () => {
         
         </div>
       </form>
+      <div className='text-center mt-12'>
+<button className="bg-black  text-white text-sm hover:bg-neutral-700 font-bold py-2 px-12 rounded focus:outline-none focus:shadow-outline"
+onClick={()=>{navigate('/userForm')}}
+            >Back</button>
+</div>
     </div>
   );
 };
